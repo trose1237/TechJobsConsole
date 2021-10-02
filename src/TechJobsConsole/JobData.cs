@@ -132,11 +132,16 @@ namespace TechJobsConsole
                 }
             }
 
+            
             // Add the final value
             rowValues.Add(valueBuilder.ToString());
             valueBuilder.Clear();
 
             return rowValues.ToArray();
         }
+
+        //public static List<Dictionary<string, string>> FindByValue(string value)
+        //    foreach( )
+        //}
     }
 }

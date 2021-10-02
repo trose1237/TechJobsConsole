@@ -5,6 +5,10 @@ namespace TechJobsConsole
 {
     class Program
     {
+        private static List<Dictionary<string, string>> choiceKeys;
+        private static List<Dictionary<string, string>> columnChoices;
+
+
         static void Main(string[] args)
         {
             // Create two Dictionary vars to hold info for menu and data
@@ -118,7 +122,51 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("PrintJobs is not implemented yet");
+
+            for (int i = 0; i < JobData.FindAll().Count; i++) 
+            {
+                foreach (Dictionary<string, string> someJob in someJobs)
+                {
+                    Console.WriteLine("*****\n" +
+                    "{0} : {1}\n", someJob.Keys, someJob.Values +
+                    "*****\n");
+                }
+            }
+
+           // { 0} : { 1}
+            //", kvp.Keys, kvp.Values
+
+           // Console.WriteLine("*****\n" +
+           //           "name: \n" +
+           //         "employer: \n" +
+           //       "location: \n" +
+           //     "position type: \n" +
+           //   "core competency: \n" +
+           // "*****\n");
+
+
+
+
+
+            //foreach(string entry in someJobs) 
+            //for (int i = 0; i < someJobs.Count; i++)
+            //{
+
+            //  foreach (Dictionary<string, string> entry in someJobs)
+            //{
+            //  if (Program.columnChoices != Dictionary)
+            //{
+            //  Console.WriteLine("No results.");
+            //}
+            //else
+            //{
+            //  Console.WriteLine(entry.Keys + " : " + entry.Values);
+            //}
+            //}
+
+            //}
+
+          
         }
     }
 }
